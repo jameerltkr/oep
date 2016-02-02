@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="OEPDBModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityContainer Name="OEPDBModelStoreContainer">
+          <EntitySet Name="QuestionPaper" EntityType="OEPDBModel.Store.QuestionPaper" store:Type="Tables" Schema="dbo" />
+        </EntityContainer>
+        <EntityType Name="QuestionPaper">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="QuestionPaperName" Type="varchar" MaxLength="500" />
+          <Property Name="TotalObjQues" Type="numeric" Precision="10" />
+          <Property Name="QuesMarkPerQues" Type="numeric" Precision="10" />
+          <Property Name="ObjQuesMark" Type="numeric" Precision="10" />
+          <Property Name="PracticalQuesMark" Type="numeric" Precision="10" />
+          <Property Name="TotalMarks" Type="numeric" Precision="10" />
+          <Property Name="PassingMark" Type="numeric" Precision="10" />
+          <Property Name="ObjExamTime" Type="varchar" MaxLength="100" />
+        </EntityType>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="OEPDBModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="OEPDBEntities2" p1:LazyLoadingEnabled="true">
+          <EntitySet Name="QuestionPapers" EntityType="OEPDBModel.QuestionPaper" />
+        </EntityContainer>
+        <EntityType Name="QuestionPaper">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="QuestionPaperName" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="TotalObjQues" Type="Decimal" Precision="10" Scale="0" />
+          <Property Name="QuesMarkPerQues" Type="Decimal" Precision="10" Scale="0" />
+          <Property Name="ObjQuesMark" Type="Decimal" Precision="10" Scale="0" />
+          <Property Name="PracticalQuesMark" Type="Decimal" Precision="10" Scale="0" />
+          <Property Name="TotalMarks" Type="Decimal" Precision="10" Scale="0" />
+          <Property Name="PassingMark" Type="Decimal" Precision="10" Scale="0" />
+          <Property Name="ObjExamTime" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="OEPDBModelStoreContainer" CdmEntityContainer="OEPDBEntities2">
+          <EntitySetMapping Name="QuestionPapers">
+            <EntityTypeMapping TypeName="OEPDBModel.QuestionPaper">
+              <MappingFragment StoreEntitySet="QuestionPaper">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="QuestionPaperName" ColumnName="QuestionPaperName" />
+                <ScalarProperty Name="TotalObjQues" ColumnName="TotalObjQues" />
+                <ScalarProperty Name="QuesMarkPerQues" ColumnName="QuesMarkPerQues" />
+                <ScalarProperty Name="ObjQuesMark" ColumnName="ObjQuesMark" />
+                <ScalarProperty Name="PracticalQuesMark" ColumnName="PracticalQuesMark" />
+                <ScalarProperty Name="TotalMarks" ColumnName="TotalMarks" />
+                <ScalarProperty Name="PassingMark" ColumnName="PassingMark" />
+                <ScalarProperty Name="ObjExamTime" ColumnName="ObjExamTime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

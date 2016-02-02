@@ -1,0 +1,8 @@
+﻿body {
+    font-family:Verdana;
+    font-size:12px;
+    background:#f5f5f5;
+}
+#form1 div fieldset table tr td span{
+    color:red;
+}

@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="OEPDBModelStoreContainer" CdmEntityContainer="OEPDBEntities2">
+    <EntitySetMapping Name="QuestionPapers">
+      <EntityTypeMapping TypeName="OEPDBModel.QuestionPaper">
+        <MappingFragment StoreEntitySet="QuestionPaper">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="QuestionPaperName" ColumnName="QuestionPaperName" />
+          <ScalarProperty Name="TotalObjQues" ColumnName="TotalObjQues" />
+          <ScalarProperty Name="QuesMarkPerQues" ColumnName="QuesMarkPerQues" />
+          <ScalarProperty Name="ObjQuesMark" ColumnName="ObjQuesMark" />
+          <ScalarProperty Name="PracticalQuesMark" ColumnName="PracticalQuesMark" />
+          <ScalarProperty Name="TotalMarks" ColumnName="TotalMarks" />
+          <ScalarProperty Name="PassingMark" ColumnName="PassingMark" />
+          <ScalarProperty Name="ObjExamTime" ColumnName="ObjExamTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
